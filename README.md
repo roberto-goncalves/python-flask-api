@@ -1,1 +1,1 @@
-# python-flask-api
+# A simple python dockerized API using FLASK
