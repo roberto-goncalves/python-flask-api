@@ -4,9 +4,7 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - chmod +x build_image.sh
-      - chmod 400 build_image.sh
-      - ./build_image.sh
+      - chmod +x build_image.sh && chmod 400 build_image.sh && ./build_image.sh
     when:
       event: [push]
 
