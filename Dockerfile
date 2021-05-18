@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN pip install flake8 pylint Flask \
+RUN pip install flake8 pylint Flask safety tox \
     && rm -rf /root/.cache
 
 COPY ./ /root/python-container
