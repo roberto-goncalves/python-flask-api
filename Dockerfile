@@ -1,7 +1,7 @@
 FROM python:3.6.4-alpine
 
 RUN apk add --no-cache --update python3-dev gcc build-base
-RUN pip install flake8 pylint \
+RUN pip install flake8 pylint Flask \
     && rm -rf /root/.cache
 
 COPY ./ /root/python-container
