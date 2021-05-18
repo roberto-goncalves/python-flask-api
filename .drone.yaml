@@ -1,0 +1,18 @@
+pipeline:
+  build-docker:
+    image: docker:17.12.1-ce
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - ./build_image.sh
+    when:
+      event: [push]
+
+  flake8:
+    image: python-container:${DRONE_COMMIT_SHA}
+    commands:
+      - flake8
+    when:
+      event: [push, pull_request]
+
+branches: master
