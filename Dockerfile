@@ -1,6 +1,6 @@
 FROM python:3.6.4-alpine
 
-RUN pip install flake8 pylint \
+RUN pip install flake8 \
     && rm -rf /root/.cache
 
 COPY ./ /root/python-container
