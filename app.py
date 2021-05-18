@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def return_post():
+    print testpush
     print request.data
     return request.data
 
