@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def return_post():
-    print request.data
+    print(request.data)
     return request.data
 
 
