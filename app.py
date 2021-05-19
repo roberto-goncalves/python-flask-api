@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def return_post():
     """ DOCSTRING """
-    print request.data)
+    print(request.data)
     return request.data
 
 
