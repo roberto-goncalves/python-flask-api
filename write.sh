@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "test" >> my_package
+echo "$1" >> my_package
